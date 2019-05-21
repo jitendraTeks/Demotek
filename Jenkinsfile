@@ -39,7 +39,7 @@ node {
 				rmsg = sh returnStdout: true, script: "${toolbelt} force:mdapi:deploy -d manifest/. -u ${HUB_ORG}"
 			}else{
 			  // rmsg = bat returnStdout: true, script: "\"${toolbelt}\" force:mdapi:deploy -d manifest/. -u ${HUB_ORG}"
-				rmsg = bat returnStatus: true, script: "\"${toolbelt}\" force:source:push --targetusername ${HUB_ORG}"
+				rmsg = bat returnStatus: true, script: "\"${toolbelt}\" force:source:deploy --targetusername ${HUB_ORG}"
 				 println('deploying using force:push')
 			}
 			  
